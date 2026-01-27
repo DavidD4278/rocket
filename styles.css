@@ -1,0 +1,354 @@
+/* =========================================
+   PALETTE & CONFIGURATION GÉNÉRALE
+   ========================================= */
+   :root {
+    --bleu-mer: #0077be;
+    --sable: #f4e4bc;
+    --blanc: #ffffff;
+    --fonce: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--sable);
+    color: var(--fonce);
+    line-height: 1.6;
+}
+
+/* --- BARRE DE NAVIGATION --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 5%;
+    background-color: var(--bleu-mer);
+    color: var(--blanc);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.nav-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-profile-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--blanc);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.nav-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--blanc);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* =========================================
+   ACCUEIL (INDEX)
+   ========================================= */
+.hero {
+    height: 70vh;
+    background: url('img/dans_la_mer.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    color: var(--blanc);
+    font-size: 3rem;
+    background: rgba(0, 119, 190, 0.7);
+    padding: 20px 40px;
+    border-radius: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    max-width: 90%;
+}
+
+/* =========================================
+   PAGE PROFIL
+   ========================================= */
+
+/* Bannière de tête */
+.profile-banner {
+    height: 300px;
+    background: url('img/rocket_profil.jpg') center/cover no-repeat;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.banner-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-banner h1 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Carte d'identité */
+.id-card {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    border: 3px solid var(--bleu-mer);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.id-card-header {
+    background: var(--bleu-mer);
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.id-card-content {
+    display: flex;
+    padding: 25px;
+    gap: 30px;
+    align-items: center;
+    background-color: #fdfaf2;
+}
+
+.id-photo {
+    flex: 0 0 180px;
+}
+
+.id-photo img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.id-column {
+    flex: 1;
+}
+
+.id-column p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    border-bottom: 1px dashed #e0d0b0;
+    padding-bottom: 5px;
+}
+
+/* Section Histoire (Rencontre) */
+.story-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin: 40px 10%;
+}
+
+.story-image {
+    flex: 1;
+    text-align: center;
+}
+
+.story-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 20px;
+    border: 3px solid var(--bleu-mer); 
+    outline: 8px solid white;
+    outline-offset: -11px; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-text h2 {
+    color: var(--bleu-mer);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* =========================================
+   PAGE ESCAPADES (COLONNES)
+   ========================================= */
+.escapade-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.escapade-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.escapade-image {
+    flex: 1;
+}
+
+.escapade-image img {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid var(--bleu-mer);
+    outline: 6px solid white;
+    outline-offset: -9px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.escapade-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.escapade-text h2 {
+    color: var(--bleu-mer);
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   PAGE CONTACT
+   ========================================= */
+.contact-grid {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 5%;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.contact-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--bleu-mer);
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.contact-container {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: var(--bleu-mer);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #005fa3;
+}
+
+/* =========================================
+   FOOTER & RESPONSIVE
+   ========================================= */
+footer {
+    background: var(--bleu-mer);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 900px) {
+    .navbar { flex-direction: column; gap: 10px; }
+    .hero h1 { font-size: 1.8rem; }
+    .story-section, .escapade-row, .contact-grid {
+        flex-direction: column !important;
+        margin: 20px 5%;
+    }
+    .id-card-content { flex-direction: column; }
+}

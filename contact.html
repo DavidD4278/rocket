@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo-container">
+            <div class="nav-profile-circle">
+                <img src="img/rocket_plage.jpg" alt="Rocket Avatar" class="nav-avatar">
+            </div>
+            <div class="logo">Rocket<span>.</span></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="escapades.html">Escapades</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="content-page">
+        <div class="content-section" style="text-align: center;">
+            <h1 style="margin-bottom: 10px;">Contactez l'équipe de Rocket !</h1>
+            <p>Une question sur ses aventures ou envie de partager une balade ?</p>
+        </div>
+
+        <section class="contact-grid">
+            
+            <div class="contact-info">
+                <img src="img/rocket_profil.jpg" alt="Rocket vous attend" class="contact-photo">
+                <h3>Rocket vous écoute</h3>
+                <p>Que ce soit pour un conseil sur les bâtons de bois ou juste pour dire bonjour, n'hésitez pas !</p>
+            </div>
+
+            <div class="contact-container">
+                <form class="contact-form" action="https://formspree.io/f/mkgbvpey" method="POST">
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" name="name" placeholder="Ton nom..." required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="_replyto" placeholder="Ton adresse email..." required>
+
+    <label for="sujet">Sujet</label>
+    <input type="text" id="sujet" name="subject" placeholder="De quoi souhaites-tu parler ?">
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="6" placeholder="Ton message ici..." required></textarea>
+
+    <button type="submit">Envoyer la patoune 🐾</button>
+</form>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Le site officiel de Rocket</p>
+    </footer>
+
+</body>
+</html>
